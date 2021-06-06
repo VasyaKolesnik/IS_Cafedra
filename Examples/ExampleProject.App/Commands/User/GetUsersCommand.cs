@@ -15,7 +15,7 @@ namespace ExampleProject.App.Commands.User
 {
     public class GetUsersCommand : IRequest<UsersListRequest>
     {
-
+        
     }
 
     public class GetUsersCommandHandler : IRequestHandler<GetUsersCommand, UsersListRequest>
@@ -31,7 +31,7 @@ namespace ExampleProject.App.Commands.User
         {
             return await Task.Run(() =>
             {
-                var userList = _usersService.Select(_ => _.Id > 0).ToList();
+                var userList = _usersService.Select(_ => true).ToList();
                 var userRequest = new UsersListRequest
                 {
                     UsersList = userList

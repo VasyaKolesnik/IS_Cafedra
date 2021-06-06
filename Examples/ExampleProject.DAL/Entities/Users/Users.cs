@@ -1,12 +1,13 @@
 ﻿using Core.DAL.Entities;
 using ExampleProject.DAL.Entities.Discipline;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ExampleProject.DAL.Entities.Users
 {
-    public class Users : AbstractEntity
+    public class Users : IdentityUser, IEntity
     {
         /// <summary>
         /// Имя
@@ -52,5 +53,7 @@ namespace ExampleProject.DAL.Entities.Users
         /// Основное место работы
         /// </summary>
         public string MainPlaceOfWork { get; set; }
+
+        int IEntity.Id { get ; set ; }
     }
 }
