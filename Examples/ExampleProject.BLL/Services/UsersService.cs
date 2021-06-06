@@ -11,10 +11,30 @@ using System.Threading.Tasks;
 
 namespace ExampleProject.BLL.Services
 {
-    public class UsersService : AbstractService<Users, UsersDTO>
+    public class UsersService : IService<Users, UsersDTO>
     {
-        public UsersService(IRepository<Users> repository, IMapper mapper) : base(repository, mapper)
+        public UsersService(IRepository<Users> repository, IMapper mapper) 
         {
+        }
+
+        public IEnumerable<UsersDTO> Select(Func<Users, bool> predicate)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<UsersDTO> Create(UsersDTO dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<UsersDTO> Update(UsersDTO dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Delete(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
