@@ -30,6 +30,7 @@ namespace Core.BLL.Configuration
                 .AddDbContextFactories(assemblies)
                 .AddAutoMapperConfigs(assemblies)
                 .AddMediatR(assemblies.ToArray())
+                .AddLogging()
                 ;
         }
     }
