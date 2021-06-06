@@ -52,9 +52,5 @@ namespace ExampleProject.DAL.Entities.Users
         /// Основное место работы
         /// </summary>
         public string MainPlaceOfWork { get; set; }
-        /// <summary>
-        /// Список дисциплин
-        /// </summary>
-        public ICollection<Disciplines> Disciplines { get; set; }
     }
 }
