@@ -12,4 +12,8 @@
     <ProjectReference Include="..\..\Core\Core.DAL\Core.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

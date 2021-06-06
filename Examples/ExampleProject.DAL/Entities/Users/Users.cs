@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ExampleProject.DAL.Entities.Users
 {
-    public class Users : IdentityUser, IEntity
+    public class Users : IdentityUser
     {
         /// <summary>
         /// Имя
@@ -54,6 +54,5 @@ namespace ExampleProject.DAL.Entities.Users
         /// </summary>
         public string MainPlaceOfWork { get; set; }
 
-        int IEntity.Id { get ; set ; }
     }
 }

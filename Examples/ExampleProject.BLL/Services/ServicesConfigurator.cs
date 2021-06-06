@@ -16,7 +16,7 @@ namespace ExampleProject.BLL.Services
         {
             serviceCollection
                 .AddSingleton<IService<ExampleEntity, ExampleEntityDto>, ExampleService>()
-                .AddSingleton<IService<Users, UsersDTO>, UsersService>()
+                //.AddSingleton<IService<Users, UsersDTO>, UsersService>()
                 .AddSingleton<IService<Disciplines, DisciplineDTO>, DisciplinesService>()
                 ;
         }
