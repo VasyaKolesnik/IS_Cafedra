@@ -1,3 +1,4 @@
+using Core.BLL.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,6 +20,11 @@ namespace ExampleProject.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ExampleProject.DAL.Initializator.Init();
+            ExampleProject.BLL.Initializator.Init();
+            ExampleProject.App.Initializator.Init();
+
+            Configurator.Init(services);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

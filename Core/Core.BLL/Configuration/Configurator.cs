@@ -8,12 +8,12 @@ namespace Core.BLL.Configuration
 {
     public static class Configurator
     {
-        public static ServiceProvider ServiceProvider { get; }
-        private static ServiceCollection ServiceCollection { get; }
+        public static ServiceProvider ServiceProvider { get; set; }
+        private static IServiceCollection ServiceCollection { get; set; }
 
-        static Configurator()
+        public static void Init(IServiceCollection serviceCollection)
         {
-            ServiceCollection = new ServiceCollection();
+            ServiceCollection = serviceCollection;
 
             ConfigureDepencies(ServiceCollection);
 

@@ -17,7 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core.BLL\Core.BLL.csproj" />
+    <ProjectReference Include="..\..\Core\Core.DAL\Core.DAL.csproj" />
     <ProjectReference Include="..\ExampleProject.App\ExampleProject.App.csproj" />
+    <ProjectReference Include="..\ExampleProject.BLL\ExampleProject.BLL.csproj" />
+    <ProjectReference Include="..\ExampleProject.DAL\ExampleProject.DAL.csproj" />
   </ItemGroup>
 
 </Project>
